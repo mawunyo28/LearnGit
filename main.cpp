@@ -10,14 +10,17 @@ public:
 
     Entity(float x, float y) : X(x), Y(y) {}
 
-    virtual void Move(int ax, int ay)
+    virtual void Move(float ax, float ay, float speed)
     {
-        X += ax;
-        Y += ay;
+        X += (speed * ax);
+        Y += (speed * ay);
     }
 };
 
 int main()
 {
+    Entity e(9.03f, 02.3f);
+    e.Move(92.2f, 3.23f, 32.03f);
+
     std::cout << "Hello Git hub" << std::endl;
 }
