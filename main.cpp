@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 class Entity
 {
@@ -15,6 +16,11 @@ public:
         X += (speed * ax);
         Y += (speed * ay);
     }
+
+    virtual void GetPos() const
+    {
+        std::cout << "X = " << X << "\n" << "Y = " << Y << std::endl;
+    }
 };
 
 int main()
@@ -22,5 +28,6 @@ int main()
     Entity e(9.03f, 02.3f);
     e.Move(92.2f, 3.23f, 32.03f);
 
-    std::cout << "Hello Git hub" << std::endl;
+    e.GetPos();
+    
 }
